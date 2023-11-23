@@ -1,0 +1,134 @@
+.footer {
+    font-size: 12px;
+    text-align: center;
+    align-items: center;
+    background-color: var(--bg);
+    width: 100%;
+    padding: 10px;
+}
+.footer-img {
+    display: block;
+}
+.footer_p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 14px;
+    color: var(--bg);
+    line-height: 12px;
+}
+.footer-contact {
+    display: flex;
+    justify-content:end;
+    align-items: center;
+    width: 100%;
+}
+.contenedor-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--semiblack);
+    width: 100%;
+    height: 75px;
+}
+@media (min-width: 1024px){
+    .footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        background-color: var(--bg);
+        width: 100%;
+        height: 150px;
+    }
+    .footer-img {
+        display: block;
+    }
+    .footer_p {
+        display: flex;
+        gap: 8px;
+        font-size: 18px;
+        color: var(--bg);
+    }
+    .footer-contact {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 130px;
+    }
+    .github-icon {
+        justify-content: space-between;
+        align-items: center;
+        width: auto;
+        display: flex;
+        padding: 0px 0px;
+        border: none;
+        border-radius: 5px;
+        background-color: var(--semiblack);
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        cursor:pointer;
+    }
+    .github-icon:hover {
+        background-color: #fffbfb;
+    }
+    .instagram-icon {
+        justify-content: space-between;
+        align-items: center;
+        width: auto;
+        display: flex;
+        padding: 0px 0px;
+        border: none;
+        border-radius: 5px;
+        background-color: var(--semiblack);
+        color: rgb(33, 15, 15);
+        text-decoration: none;
+        font-size: 16px;
+        cursor:pointer;
+    }
+    .instagram-icon:hover {
+        background-color: #4b484800;
+    }
+    .contenedor-footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 20px;
+        background-color: var(--semiblack);
+        width: 100%;
+        height: 90px;
+    }
+}
+
+@media (max-width: 360px) {
+    .footer_p {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 12px;
+        flex-wrap: wrap;
+    }
+    .contenedor-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 920px) {
+    .footer_p {
+        display: flex;
+        gap: 97px
+      
+    }
+    .contenedor-footer {
+        display: flex;
+        
+    }
+    .footer-contact{
+        width: 30%;
+    }
+}

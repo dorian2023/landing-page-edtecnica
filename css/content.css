@@ -1,0 +1,207 @@
+.section-characters {
+    background-color: var(--semiblack);
+    padding: 10px;
+    margin: 15px 0;
+}
+.section-title {
+    margin-bottom: 10px;
+}
+.characters {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    /* repeat(auto-fill, 285px) */
+    justify-content:space-around;
+    gap: 15px;
+}
+.grid-characters {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    /* este height se quita o se deja */
+    height: auto;
+    overflow: inherit;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0 .5);
+}
+.characters_img > img{
+    width: 100%;
+    height: 285px;
+    border-radius: 15px;
+    object-fit: cover;
+    display: block;
+}
+.characters_h3 {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);
+    background: hsla(350, 93%, 29%, 0.279);
+    transition: transform .5s;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+}   
+.characters_h3 img{
+    width: 50px;
+}
+.characters_h3 h3{
+    color: #fff;
+}
+.grid-characters:hover .characters_h3{
+    transform: scale(1);
+}
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+  }
+.characters_img{
+    background: #191c29;
+    width: var(--card-width);
+    height: var(--card-height);
+    padding: 3px;
+    position: relative;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    font-size: 1.5em;
+    color: rgb(88 199 250 / 0%);
+    cursor: pointer;
+    font-family: cursive;
+}
+.characters_img:hover {
+    color: rgb(88 199 250 / 100%);
+    transition: color 1s;
+}
+.characters_img:hover:before, .characters_img:hover:after {
+    animation: none;
+    opacity: 0;
+}
+.characters_img::before {
+    content: "";
+    width: 104%;
+    height: 102%;
+    border-radius: 8px;
+    background-image: linear-gradient(
+      var(--rotate)
+      , #ec5050, #590a0aab 43%, #5a00005e);
+      position: absolute;
+      z-index: -1;
+      top: -1%;
+      left: -2%;
+      animation: spin 2.5s linear infinite;
+}
+.characters_img::after {
+    position: absolute;
+    content: "";
+    top: calc(var(--card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(
+      var(--rotate)
+      , #5ddcff, #c9642068 43%, #603533);
+      opacity: 1;
+    transition: opacity .5s;
+    animation: spin 2.5s linear infinite;
+}
+  
+  @keyframes spin {
+    0% {
+      --rotate: 0deg;
+    }
+    100% {
+      --rotate: 360deg;
+    }
+  }
+  
+  img {
+    color: #212534;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-top: 0rem;
+  }
+
+
+@media (max-width: 767px) {
+  .characters  {
+    
+    grid-template-columns: repeat(1, 1fr); /* 2 columnas */
+    grid-auto-rows: auto; /* Altura automática para 6 filas */
+  }
+  .grid-characters {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .characters  {
+    
+    grid-template-columns: repeat(1, 1fr); /* 2 columnas */
+    grid-auto-rows: auto; /* Altura automática para 6 filas */
+  }
+  .grid-characters {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+  .section-title{
+    margin-bottom: 15px;
+    text-wrap: balance;
+    text-align: center;
+  }
+}
+
+@media (max-width: 330px){
+  .characters {
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: auto;
+  }
+  .grid-characters {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+
+@media (max-width: 920px) {
+  .characters  {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    grid-auto-rows: auto; /* Altura automática para 6 filas */
+  }
+  .grid-characters {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .hero_span {
+    
+  }
+};
+
+

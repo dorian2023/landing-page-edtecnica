@@ -1,0 +1,7 @@
+.wrapper {
+    max-inline-size: 100%;
+    padding: 0 16px;
+    margin: auto;
+    /* width:max-content; */
+}
+

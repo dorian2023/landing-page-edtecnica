@@ -1,0 +1,35 @@
+/* Importando hojas de estilos para su funcionamiento */
+@import './navbar.css';
+@import './wrapper.css';
+@import './main-content.css';
+@import './decription_hero.css';
+@import './content.css';
+@import './footer.css';
+@import './shared.css';
+
+/* Declaracion de Variable */
+:root{
+    --color--text: #EF4444;
+    --bg: #4a0404;
+    --gray: #6b7280;
+    --font: system-ui;
+    --black: #0c0c0c;
+    --white: #ffffff;
+    --semiblack: #1e1e1d20;
+    --white: #ffffff;
+    --card-height: 65vh;
+    --card-width: calc(var(--card-height) / 1.5);
+}
+/* margen de la pag */
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* Margen de todo el Body */
+body {
+    font-family: var(--font);
+    background-color: var(--semiblack);
+}
